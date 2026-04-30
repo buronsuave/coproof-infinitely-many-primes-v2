@@ -1,3 +1,3 @@
-**Theorem.** For every natural number $n$, there exists a prime number $p$ such that $p > n$.
+**Theorem.** For every natural number $n$, there exists a prime $p$ such that $p > n$.
 
-*Proof.* Unsolved.
+*Proof.* Let $n$ be an arbitrary natural number. Consider the number $n! + 1$, which is at least $2$ (since $n! \geq 1$), so it has a smallest prime factor; call it $p = \text{minFac}(n! + 1)$. Since $p$ is a prime factor of $n! + 1$, it suffices to show $p > n$. Suppose for contradiction that $p \leq n$. Then $p \mid n!$ (as $p$ is a prime no greater than $n$, it appears in the factorial product). But $p \mid n! + 1$ by construction, so $p \mid (n! + 1) - n! = 1$. This forces $p \leq 1$, contradicting the fact that every prime satisfies $p \geq 2$. Therefore $p > n$, and we have found a prime exceeding $n$. $\blacksquare$
